@@ -1,3 +1,3 @@
-# web-platform-sstn7e
+**Vanilla JS Academy Week 4 - Friday project**
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-sstn7e)
+Sanitize third-party API results data to prevent cross-site scripting.
