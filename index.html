@@ -57,7 +57,7 @@
           .replace(/data:/gi, '')
           .replace(/javascript:/gi, '')
           .replace(/[^\w-_. ]/gi, function (c) {
-            return `&#${c.charCodeAt(0)};`;
+            return `&#${c.codePointAt(0)};`;
           });
       }
 
