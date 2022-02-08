@@ -18,7 +18,7 @@
     </style>
   </head>
   <body>
-    <h1>Dragon Trainer Monthly - XSS</h1>
+    <h1 "id="pageheader">Dragon Trainer Monthly - XSS</h1>
 
     <div id="app"></div>
 
@@ -79,7 +79,6 @@
         app.innerHTML = articles
           .map(function (article) {
             let author = getAuthor(article.author, authors);
-
             return `
 						<article>
 							<h2><a href="${encodeHTML(article.url)}">${encodeHTML(article.title)}</a></h2>
@@ -112,6 +111,8 @@
           console.warn(error);
           renderFail();
         });
+	let pageHeader = document.querySelector("#pageheader");
+	pageHeader.innerHTML += `${encodeHTML("👋")}`;
     </script>
   </body>
 </html>
